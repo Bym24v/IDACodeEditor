@@ -1,7 +1,5 @@
 # IDACodeEditor
-### Simple IDA Pro Code Editor
-
-### Available 6.8 / 7
+Simple IDA Pro Code Editor Available 6.8 / 7
 
 ## Installation
 
