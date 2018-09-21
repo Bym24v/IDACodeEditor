@@ -1,5 +1,5 @@
 # IDACodeEditor
-Simple IDA Pro Code Editor Available 6.8 / 7
+Simple IDA Pro Code Editor | Available 6.8 / 7
 
 ## Installation
 
@@ -13,7 +13,7 @@ pip install tornado
 IDACodeEditor folder and IDACodeEditor.py -> \IDA 6.8 or 7\plugins
 ```
 
-### front-end
+### Front-end
 ```
 open index.html in browser
 ```
