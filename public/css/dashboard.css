@@ -1,0 +1,207 @@
+#control-drag {
+  -webkit-app-region: drag;
+}
+
+#control-nodrag {
+  -webkit-app-region: no-drag;
+}
+
+#Controls:hover .screen {
+  display: none;
+}
+
+.navbar-inverse{
+  background-color: #007bff;
+  border-color: none;
+}
+
+/* img */
+img{
+  width: 16px;
+}
+
+/* reset .nav>li {} */
+.nav>li{
+  position: absolute;
+}
+
+
+.pause{
+  top: 40px;
+}
+
+.refrest{
+  top: 40px; /* 80px */
+}
+
+/* Ajustes */
+.settings{
+  margin-left: 19px;
+  position: fixed;
+  bottom: 15px;
+  cursor: pointer;
+}
+
+.navbar-inverse .navbar-brand{
+  color: white;
+}
+
+
+/* Editor */
+#code{
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  top: 50px;
+  bottom: 0px;
+}
+
+
+
+
+.cm-s-material.CodeMirror{
+  left: 0px;
+  top: 50px;
+  bottom: 0px;
+  height: 100%;
+}
+
+
+.send-btn{
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  background-color: #007bff;
+  border: 0px;
+  width: 70px;
+  height: 35px;
+
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+/*.d-sm-block{
+  display: none!important;
+}*/
+
+
+
+
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+/*.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}*/
+
+/* Sidebar navigation */
+.nav-sidebar {
+  /*margin-right: -21px;  20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 576px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}

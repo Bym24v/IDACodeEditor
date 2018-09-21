@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="IDA Code Editor">
+    <title>IDA Code Editor</title>
+
+    <!-- bootstrap 3-->
+    <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <!-- Tabs -->
+    <!--<link href="css/tabs.css" rel="stylesheet">-->
+
+  </head>
+
+  <body>
+    <nav id="control-drag"class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+          <a class="navbar-brand" href="#">IDA Code Editor</a>
+
+        </div><!-- end navbar-header -->
+      </div> <!-- end container fluid -->
+
+    </nav>
+
+    <div id="control-nodrag" class="container-fluid">
+      <div class="row">
+
+        <!--<div class="col-sm-3 col-md-2 sidebar">
+
+          <ul class="nav nav-sidebar">
+
+            <li id="play" class="play">
+
+              <a href="#">
+                <img src="css/glyph/svg/si-glyph-arrow-forward.svg">
+              </a>
+
+            </li>
+          </ul>
+        </div>--> <!-- end sidebar -->
+
+        <!-- Editor -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+          <!-- code -->
+          <div id="code"></div>
+        </div>
+      </div>
+
+      <button id="send-btn" class="send-btn btn btn-primary">Send</button>
+      
+      <div> <!-- end container fluid -->
+    
+
+    <!-- JS -->
+    <script>
+
+    var codeDiv = document.getElementById('code');
+
+    // Global editor
+    var editor;
+
+    // DOM Window
+    window.onload = () =>{
+
+      // trigger extension
+      ace.require("ace/ext/language_tools");
+
+      // snippets
+      var snippetManager = ace.require("ace/snippets").snippetManager;
+      var snippets = snippetManager.parseSnippetFile("snippet ida pro\n");
+      
+      // Add
+      snippets.push({
+        //content: "hello ${1:world}...!",
+        content: 'for ref in CodeRefsTo(get_screen_ea(), 1):\n' +
+                    '\tprint "-> " + hex(ref).replace("L", "")',
+        name: "CodeRefsTo",
+        tabTrigger: "c"
+      });
+
+      // Register snippets
+      snippetManager.register(snippets, "python");
+
+      // Ace editor
+      editor = ace.edit("code");
+      editor.session.setMode("ace/mode/python");
+      editor.setTheme("ace/theme/tomorrow_night_eighties");
+
+      // enable autocompletion and snippets
+      editor.setOptions({
+          enableBasicAutocompletion: true,
+          enableSnippets: true,
+          enableLiveAutocompletion: true,
+          fontSize: "12pt" 
+      });
+
+    } // end window onload
+
+
+    </script>
+
+
+    <!-- jquery -->
+    <script src="js/jquery/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Ace -->
+    <script src="js/ace/ace.js" charset="utf-8"></script>
+    <script src="js/ace/ext-language_tools.js" charset="utf-8"></script>
+
+    <!-- Bootstrao 4 -->
+    <script src="js/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+   
+
+    <!-- App --> 
+    <script src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>
