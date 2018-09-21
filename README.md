@@ -22,5 +22,5 @@ open index.html in browser
 ![alt tag](https://github.com/Bym24v/IDACodeEditor/blob/master/caps/IDACodeEditor.png)
 
 
-## Wip snippets ida python 
+### Wip snippets ida python 
 ![alt tag](https://github.com/Bym24v/IDACodeEditor/blob/master/caps/IDACodeEditor2.png)
